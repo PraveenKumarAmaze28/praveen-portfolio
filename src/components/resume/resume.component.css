@@ -1,0 +1,193 @@
+.resume-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #4f46e5;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 0 0 18px;
+  color: #111827;
+  font-weight: 800;
+}
+
+.section-heading h2 span {
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #6366f1
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-heading p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.resume-card {
+  max-width: 1100px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  padding: 32px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f8faff
+  );
+
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+
+  transition: all 0.3s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+.resume-icon {
+  min-width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #eef4ff;
+
+  font-size: 30px;
+}
+
+.resume-content {
+  flex: 1;
+}
+
+.resume-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 22px;
+  color: #111827;
+}
+
+.resume-content p {
+  margin: 0 0 15px;
+
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.resume-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.resume-tags span {
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resume-action {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-button,
+.download-button {
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 9px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  text-align: center;
+}
+
+.resume-button {
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #6366f1
+  );
+}
+
+.download-button {
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+
+  background: white;
+}
+
+.resume-button:hover,
+.download-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+  .resume-section {
+    padding: 70px 6%;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .resume-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-action {
+    width: 100%;
+  }
+
+  .resume-button,
+  .download-button {
+    width: 100%;
+  }
+
+}

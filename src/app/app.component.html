@@ -1,19 +1,80 @@
-<app-navbar></app-navbar>
+<header class="navbar">
 
-<main id="home">
+  <div class="nav-container">
 
-  <app-hero></app-hero>
+    <a href="#home" class="logo">
+      Praveen Kumar V
+    </a>
 
-   <app-about></app-about>
-   
-   <app-skills></app-skills>
+    <nav
+      class="nav-links"
+      [class.mobile-open]="menuOpen"
+    >
 
-   <app-experience></app-experience>
+      <a href="#about" (click)="closeMenu()">About</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#experience" (click)="closeMenu()">Experience</a>
+      <a href="#projects" (click)="closeMenu()">Projects</a>
+      <a href="#education" (click)="closeMenu()">Education</a>
+      <a href="#resume" (click)="closeMenu()">Resume</a>
+      <a href="#contact" (click)="closeMenu()">Contact</a>
 
-    <app-projects></app-projects>
+    </nav>
 
-    <app-education></app-education>
+    <button
+      class="menu-toggle"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <app-certifications></app-certifications>
+  </div>
+
+</header>
+
+
+<!-- ========================= -->
+<!-- PAGE CONTENT -->
+<!-- ========================= -->
+
+<main>
+
+  <!-- HERO -->
+  <app-hero id="home"></app-hero>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <!-- Your About content -->
+  </section>
+
+
+  <!-- SKILLS -->
+  <app-skills id="skills"></app-skills>
+
+
+  <!-- EXPERIENCE -->
+  <app-experience id="experience"></app-experience>
+
+
+  <!-- PROJECTS -->
+  <app-projects id="projects"></app-projects>
+
+
+  <!-- EDUCATION -->
+  <app-education id="education"></app-education>
+
+
+  <!-- RESUME -->
+  <app-resume id="resume"></app-resume>
+
+
+  <!-- CONTACT -->
+  <app-contact id="contact"></app-contact>
 
 </main>

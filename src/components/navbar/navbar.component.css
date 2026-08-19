@@ -1,42 +1,288 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000;
+
+  width: 100%;
+
   background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(12px);
+
   border-bottom: 1px solid #e5e7eb;
 }
 
-.navbar-container {
-  max-width: 1200px;
+.nav-container {
+  max-width: 1380px;
+
   margin: 0 auto;
-  padding: 1rem 2rem;
+
+  padding: 0 5%;
+
+  height: 66px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .logo {
-  font-size: 1.2rem;
-  font-weight: 700;
   text-decoration: none;
+
   color: #111827;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
 }
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+
+  align-items: center;
+
+  gap: 30px;
 }
 
 .nav-links a {
+  position: relative;
+
   text-decoration: none;
+
   color: #374151;
-  font-size: 0.95rem;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  padding: 23px 0;
+
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #2563eb;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 16px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #6366f1
+  );
+
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 8px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: white;
+
+  cursor: pointer;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 22px;
+
+  height: 2px;
+
+  background: #111827;
+
+  border-radius: 2px;
+
+  transition: all 0.25s ease;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    height: 62px;
+
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  /* Show hamburger */
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Hide desktop menu */
+
+  .nav-links {
+    position: absolute;
+
+    top: 62px;
+
+    left: 0;
+
+    right: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 10px 20px 20px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow:
+      0 15px 30px rgba(15, 23, 42, 0.08);
+
+    /* Hidden */
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  /* Open menu */
+
+  .nav-links.mobile-open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    width: 100%;
+
+    padding: 14px 10px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+  }
+
+  .nav-links a:hover {
+    background: #f3f6ff;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
 }

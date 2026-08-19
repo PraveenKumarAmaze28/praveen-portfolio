@@ -8,14 +8,26 @@ import { ExperienceComponent } from '../components/experience/experience.compone
 import { ProjectsComponent } from './components/projects/projects.component';
 import { EducationComponent } from './components/education/education.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
+import { ResumeComponent } from '../components/resume/resume.component';
+import { ContactComponent } from '../components/contact/contact.component';
 @Component({
   selector: 'app-root',
   standalone: true,
  
-  imports: [RouterOutlet,NavbarComponent,HeroComponent,AboutComponent,SkillsComponent,ExperienceComponent,ProjectsComponent,EducationComponent,CertificationsComponent],
+  imports: [RouterOutlet,NavbarComponent,HeroComponent,ResumeComponent,ContactComponent,AboutComponent,SkillsComponent,ExperienceComponent,ProjectsComponent,EducationComponent,CertificationsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'praveen-portfolio';
+
+  menuOpen = false;
+
+toggleMenu(): void {
+  this.menuOpen = !this.menuOpen;
+}
+
+closeMenu(): void {
+  this.menuOpen = false;
+}
 }
