@@ -1,0 +1,59 @@
+
+<section class="certifications" id="certifications">
+
+  <div class="section-container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        CERTIFICATIONS
+      </p>
+
+      <h2>
+        Continuous learning
+      </h2>
+
+    </div>
+
+    <div class="certification-grid">
+
+      @for (
+        certification of certifications;
+        track certification.name
+      ) {
+
+        <article class="certification-card">
+
+          <div class="certificate-icon">
+            ✦
+          </div>
+
+          <div class="certificate-content">
+
+            <p class="certificate-issuer">
+              {{ certification.issuer }}
+            </p>
+
+            <h3>
+              {{ certification.name }}
+            </h3>
+
+            <p class="certificate-year">
+              {{ certification.year }}
+            </p>
+
+            <p class="certificate-description">
+              {{ certification.description }}
+            </p>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

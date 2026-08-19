@@ -1,0 +1,87 @@
+<section class="experience" id="experience">
+
+  <div class="section-container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        EXPERIENCE
+      </p>
+
+      <h2>
+        My professional journey
+      </h2>
+
+      <p class="section-description">
+        My progression from a trainee developer to a
+        senior software developer.
+      </p>
+
+    </div>
+
+    <div class="timeline">
+
+      @for (experience of experiences; track experience.role) {
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="timeline-content">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-period">
+                  {{ experience.startDate }}
+                  —
+                  {{ experience.endDate }}
+                </p>
+
+                <h3>
+                  {{ experience.role }}
+                </h3>
+
+                <p class="company">
+                  {{ experience.company }}
+                </p>
+
+              </div>
+
+              <span class="location">
+                {{ experience.location }}
+              </span>
+
+            </div>
+
+            <p class="experience-description">
+              {{ experience.description }}
+            </p>
+
+            <div class="technology-list">
+
+              @for (
+                technology of experience.technologies;
+                track technology
+              ) {
+
+                <span class="technology">
+                  {{ technology }}
+                </span>
+
+              }
+
+            </div>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

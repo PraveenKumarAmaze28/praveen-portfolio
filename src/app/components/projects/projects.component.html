@@ -1,0 +1,95 @@
+<section class="projects" id="projects">
+
+  <div class="section-container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        PROJECTS
+      </p>
+
+      <h2>
+        What I've worked on
+      </h2>
+
+      <p class="section-description">
+        A selection of enterprise applications and software
+        solutions I've contributed to throughout my career.
+      </p>
+
+    </div>
+
+    <div class="project-grid">
+
+      @for (project of projects; track project.name) {
+
+        <article class="project-card">
+
+          <div class="project-top">
+
+            <div>
+
+              <p class="project-type">
+                {{ project.type }}
+              </p>
+
+              <h3>
+                {{ project.name }}
+              </h3>
+
+            </div>
+
+            <span class="project-date">
+              {{ project.startDate }} —
+              {{ project.endDate }}
+            </span>
+
+          </div>
+
+          <p class="project-description">
+            {{ project.description }}
+          </p>
+
+          <div class="features">
+
+            <h4>Key Features</h4>
+
+            <ul>
+
+              @for (feature of project.features; track feature) {
+
+                <li>
+                  <span class="check">✓</span>
+                  {{ feature }}
+                </li>
+
+              }
+
+            </ul>
+
+          </div>
+
+          <div class="technologies">
+
+            @for (
+              technology of project.technologies;
+              track technology
+            ) {
+
+              <span class="technology">
+                {{ technology }}
+              </span>
+
+            }
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

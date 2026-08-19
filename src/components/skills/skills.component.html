@@ -1,0 +1,61 @@
+<section class="skills" id="skills">
+
+  <div class="section-container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        TECHNICAL SKILLS
+      </p>
+
+      <h2>
+        Technologies I work with
+      </h2>
+
+      <p class="section-description">
+        A selection of technologies and tools I use to build
+        modern web applications.
+      </p>
+
+    </div>
+
+    <div class="skill-groups">
+
+      @for (group of skillGroups; track group.title) {
+
+        <div class="skill-group">
+
+          <h3>
+            {{ group.title }}
+          </h3>
+
+          <div class="skill-grid">
+
+            @for (skill of group.skills; track skill.name) {
+
+              <div class="skill-card">
+
+                <i
+                  [class]="skill.icon"
+                  aria-hidden="true">
+                </i>
+
+                <span>
+                  {{ skill.name }}
+                </span>
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

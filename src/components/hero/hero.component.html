@@ -1,0 +1,175 @@
+<section class="hero" id="home">
+
+  <div class="hero-background"></div>
+
+  <div class="hero-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="badge-icon">⚡</span>
+        FULL STACK DEVELOPER
+      </div>
+
+      <h1>
+        Hi, I'm
+        <span class="gradient-text">
+          Praveen Kumar V
+        </span>
+      </h1>
+
+      <p class="hero-description">
+        I build scalable, secure and reliable web applications
+        using modern frontend, backend and database technologies.
+      </p>
+
+      <!-- STATS -->
+
+      <div class="hero-stats">
+
+        @for (stat of stats; track stat.label) {
+
+          <div class="stat">
+
+            <div class="stat-icon">
+              {{ stat.icon }}
+            </div>
+
+            <div class="stat-content">
+
+              <strong>
+                {{ stat.value }}
+              </strong>
+
+              <span>
+                {{ stat.label }}
+              </span>
+
+            </div>
+
+          </div>
+
+          @if (!$last) {
+            <div class="stat-divider"></div>
+          }
+
+        }
+
+      </div>
+
+      <!-- BUTTONS -->
+
+      <div class="hero-actions">
+
+        <a
+          href="#projects"
+          class="primary-button">
+
+          <span>🚀</span>
+
+          View My Projects
+
+          <span>→</span>
+
+        </a>
+
+        <a
+          href="#contact"
+          class="secondary-button">
+
+          <span>➤</span>
+
+          Contact Me
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="hero-visual">
+
+      <div class="profile-wrapper">
+
+        <div class="profile-glow"></div>
+
+        <div class="profile-ring">
+
+          <!-- Replace this with your actual photo -->
+<img src="/profilepic.png" alt="Praveen Kumar">
+        </div>
+
+
+        <!-- FLOATING TECHNOLOGY ICONS -->
+
+        <div class="floating-icon icon-angular">
+          <i class="devicon-angular-plain"></i>
+        </div>
+
+        <div class="floating-icon icon-dotnet">
+          <i class="devicon-dotnetcore-plain colored"></i>
+        </div>
+
+        <div class="floating-icon icon-nest">
+          <i class="devicon-nestjs-plain colored"></i>
+        </div>
+
+        <div class="floating-icon icon-sql">
+          <i class="devicon-microsoftsqlserver-plain colored"></i>
+        </div>
+
+        <div class="floating-icon icon-ts">
+          <i class="devicon-typescript-plain colored"></i>
+        </div>
+
+        <div class="floating-icon icon-js">
+          <i class="devicon-javascript-plain colored"></i>
+        </div>
+
+      </div>
+
+
+      <!-- AVAILABILITY -->
+
+      <div class="availability">
+
+        <span class="availability-dot"></span>
+
+        Available for new opportunities
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TECHNOLOGY BAR -->
+
+  <div class="technology-bar">
+
+    @for (
+      technology of technologies;
+      track technology.name
+    ) {
+
+      <div class="technology">
+
+        <i [class]="technology.icon"></i>
+
+        <span>
+          {{ technology.name }}
+        </span>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>
