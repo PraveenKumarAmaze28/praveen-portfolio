@@ -7,6 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 body {
   margin: 0;
 
@@ -20,4 +22,11 @@ body {
 
   color: #111827;
   background: #ffffff;
+}
+
+.hero-section {
+  min-height: calc(100vh - 70px);
+  padding: 45px 0 70px;
+  display: flex;
+  align-items: center;
 }
